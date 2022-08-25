@@ -42,7 +42,7 @@ const handlePizzaSubmit = event => {
   const pizzaName = $pizzaForm.querySelector('#pizza-name').value;
   const createdBy = $pizzaForm.querySelector('#created-by').value;
   const size = $pizzaForm.querySelector('#pizza-size').value;
-  // transform DOM data into areal array of jobhect to execute .map()
+  // transform DOM data into a real array of objects to execute .map()
   const toppings = [...$pizzaForm.querySelectorAll('[name=topping]:checked')].map(topping => {
     return topping.value;
   });
@@ -67,7 +67,7 @@ const handlePizzaSubmit = event => {
       console.log(postResponse);
     })
     .catch(err => {
-        console.log(err);
+      console.log(err);
     });
 };
 
